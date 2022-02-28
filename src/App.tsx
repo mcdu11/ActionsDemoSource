@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <a
           className="App-link"
           target="_blank"
+          href="#"
           rel="noopener noreferrer"
         >
           Welcome !
