@@ -13,7 +13,7 @@ function App() {
         <a
           className="App-link"
           target="_blank"
-          href="#"
+          href="https://www.baidu.com"
           rel="noopener noreferrer"
         >
           Welcome !
