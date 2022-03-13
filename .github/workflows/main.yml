@@ -60,7 +60,7 @@ jobs:
       # 1、清除ssh缓存
       # - name: clear cache
       #   run: sudo ssh-keygen -R mcdu11.top
-       - name: Prepare SSH
+      - name: Prepare SSH
         run: >
           cd ~ && mkdir .ssh &&
           touch ~/.ssh/known_hosts &&
