@@ -1,0 +1,26 @@
+name: Deploy GitHub Pages
+
+# 触发条件：在 push 到 master 分支后
+on:
+  push:
+    branches:
+      - main
+
+# 任务
+jobs:
+  deploy-to-aliyun:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # # 5、部署到 mcdu11.top 服务器
+      - name: rsync deployments mcdu11.top
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
+          switches: -avzh
+          path: build/
+          remote_path: /root/nginx/html/
+          remote_host: mcdu11.top
+          remote_port: 22
+          remote_user: root
+          remote_key: ${{ secrets.MY_ALIYUN_RSA_PRIVATE_KEY }}
