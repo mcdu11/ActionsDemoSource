@@ -73,7 +73,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.2
         with:
           # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
-          switches: -avzh
+          switches: -avzh --delete
           path: build/
           remote_path: /root/nginx/html/
           remote_host: mcdu11.top
