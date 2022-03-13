@@ -70,7 +70,7 @@ jobs:
 
       # # 5、部署到 mcdu11.top 服务器
       - name: rsync deployments mcdu11.top
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@5.2
         with:
           # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
           switches: -avzh
