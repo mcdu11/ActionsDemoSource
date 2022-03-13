@@ -63,7 +63,7 @@ jobs:
         with:
           # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
           switches: -avzh
-          path: /build
+          path: build/
           remote_path: /root/nginx/html/
           remote_host: mcdu11.top
           remote_port: 22
