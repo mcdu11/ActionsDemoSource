@@ -16,7 +16,7 @@ function App() {
           href="https://www.baidu.com"
           rel="noopener noreferrer"
         >
-          Welcome !
+          Welcome to Mcdu11.top
         </a>
       </header>
     </div>
