@@ -69,13 +69,13 @@ jobs:
         #   IP: ${{ secrets.IP }}
 
       # # 5、部署到 mcdu11.top 服务器
-      - name: rsync deployments to mcdu11.top
+      - name: Rsync deployments to mcdu11.top
         uses: burnett01/rsync-deployments@4.1
         with:
           # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
           switches: -avzh
           path: build/
-          remote_path: /root/nginx/html
+          remote_path: /root/nginx/html/ActionsDemoPage
           remote_host: mcdu11.top
           remote_port: 22
           remote_user: root
