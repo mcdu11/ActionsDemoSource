@@ -57,15 +57,19 @@ jobs:
       #     # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
       #     branch: master
 
+      # 1、清除ssh缓存
+      - name: clear cache
+        run: ssh-keygen -R mcdu11.top
+
       # # 5、部署到 mcdu11.top 服务器
-      # - name: rsync deployments mcdu11.top
-      #   uses: burnett01/rsync-deployments@4.1
-      #   with:
-      #     # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
-      #     switches: -avzh
-      #     path: build/
-      #     remote_path: /root/nginx/html/
-      #     remote_host: mcdu11.top
-      #     remote_port: 22
-      #     remote_user: root
-      #     remote_key: ${{ secrets.MY_ALIYUN_RSA_PRIVATE_KEY }}
+      - name: rsync deployments mcdu11.top
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
+          switches: -avzh
+          path: build/
+          remote_path: /root/nginx/html/
+          remote_host: mcdu11.top
+          remote_port: 22
+          remote_user: root
+          remote_key: ${{ secrets.MY_ALIYUN_RSA_PRIVATE_KEY }}
