@@ -58,8 +58,8 @@ jobs:
       #     branch: master
 
       # 1、清除ssh缓存
-      - name: clear cache
-        run: ssh-keygen -R mcdu11.top
+      # - name: clear cache
+      #   run: sudo ssh-keygen -R mcdu11.top
 
       # # 5、部署到 mcdu11.top 服务器
       - name: rsync deployments mcdu11.top
